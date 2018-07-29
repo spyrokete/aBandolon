@@ -276,7 +276,7 @@
 
         queue()
             .defer(d3.json, "http://enjalot.github.io/wwsd/data/world/world-110m.geojson")
-            .defer(d3.csv, "https://github.com/spyrokete/aBandolon/blob/master/data/poverty_map2.csv")
+            .defer(d3.csv, "https://raw.githubusercontent.com/spyrokete/aBandolon/master/data/poverty_map2.csv")
             .await(ready);
 
         function ready(error, data, population) {
