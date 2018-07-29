@@ -276,7 +276,7 @@
 
         queue()
             .defer(d3.json, "http://enjalot.github.io/wwsd/data/world/world-110m.geojson")
-            .defer(d3.csv, "https://raw.githubusercontent.com/spyrokete/aBandolon/master/data/poverty_map2.csv")
+            .defer(d3.csv, "poverty_map2.csv")
             .await(ready);
 
         function ready(error, data, population) {
@@ -354,7 +354,7 @@
                 "translate(" + margin.left + "," + margin.top + ")");
 
         // Get the data
-        d3.csv("./data/pov-gdp1.csv", function (error, data) {
+        d3.csv("pov-gdp1.csv", function (error, data) {
             if (error) throw error;
 
             // format the data
@@ -593,7 +593,7 @@
         // ******** Multi-line graph creation *********
 
         // Source of information
-        d3.csv("./data/figure4.csv", function (data) {
+        d3.csv("figure4.csv", function (data) {
 
             // Parse Year and convert Fertility Rate into number
             data.forEach(function (d) {
